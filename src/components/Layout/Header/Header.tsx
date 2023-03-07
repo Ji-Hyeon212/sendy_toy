@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Box from "@mui/material/Box";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
-import { ReactComponent as Logo } from "@assets/sendy-logo-navy.svg";
+// import { ReactComponent as Logo } from "././assets/sendy-logo-navy.svg";
 import { Toolbar } from "@mui/material";
 
 interface LinkTabProps {
@@ -32,18 +32,18 @@ const Header = () => {
 
   return (
     <Toolbar className="flex justify-between">
-      <Link to="/">
+      {/* <Link to="/">
         <Logo className="h-8" />
-      </Link>
+      </Link> */}
       <Box sx={{ width: "100%" }}>
         <Tabs
           value={value}
           onChange={handleChange}
           aria-label="nav tabs example"
         >
-          <LinkTab label="Page One" href="/drafts" />
-          <LinkTab label="Page Two" href="/trash" />
-          <LinkTab label="Page Three" href="/spam" />
+          <LinkTab label="서비스" href="/drafts" />
+          <LinkTab label="요금 안내" href="/trash" />
+          <LinkTab label="비용 계산기" href="/spam" />
         </Tabs>
       </Box>
     </Toolbar>

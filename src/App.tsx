@@ -1,11 +1,12 @@
 import React from "react";
 import LandingLayout from "./components/Layout/LandingLayout";
+import Main from "./pages/landing/Main";
 
 const App = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <LandingLayout />
+        <Main />
       </header>
     </div>
   );
