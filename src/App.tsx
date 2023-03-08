@@ -1,5 +1,4 @@
 import React from "react";
-import LandingLayout from "./components/Layout/LandingLayout";
 import Main from "./pages/landing/Main";
 
 const App = () => {
