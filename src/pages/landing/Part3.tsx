@@ -1,16 +1,24 @@
 import * as React from "react";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
-import Grid from "@mui/material/Grid";
 import Stack from "@mui/material/Stack";
-import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import Link from "@mui/material/Link";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import { Box } from "@mui/material";
 
-const theme = createTheme();
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#2e58ec",
+    },
+    secondary: {
+      main: "#f3f3f3",
+    },
+  },
+});
 
 const Part3 = () => {
   return (
@@ -34,8 +42,8 @@ const Part3 = () => {
               <b>운송이 필요한 모두를 위해</b>
             </Typography>
             <Typography
-              component="h5"
-              variant="h5"
+              component="h6"
+              variant="h6"
               align="center"
               color="text.secondary"
               paragraph
@@ -44,25 +52,21 @@ const Part3 = () => {
               만들어진 서비스입니다.
             </Typography>
           </Container>
-          <Container maxWidth="sm">
-            <img
-              sizes="small"
-              src={require("../../assets/img-service-desk.png").default}
-              alt="random"
-            />
+          <Container maxWidth="xs">
+            <img src="/assets/img-service-desk.png" alt="random" />
           </Container>
         </Stack>
 
         <Stack
-          sx={{ pt: 4 }}
+          sx={{ pt: 20 }}
           direction="row"
-          spacing={2}
+          spacing={1}
           justifyContent="center"
         >
           <Container>
             <Typography
-              component="h4"
-              variant="h4"
+              component="h5"
+              variant="h5"
               align="left"
               color="text.primary"
               gutterBottom
@@ -70,7 +74,7 @@ const Part3 = () => {
               <b>센디 요금 계산기</b>
             </Typography>
             <Typography
-              variant="body1"
+              variant="h6"
               align="left"
               color="text.secondary"
               paragraph
@@ -88,17 +92,17 @@ const Part3 = () => {
           </Container>
           <Container>
             <Typography
-              component="h4"
-              variant="h4"
-              align="center"
+              component="h5"
+              variant="h5"
+              align="left"
               color="text.primary"
               gutterBottom
             >
               <b>통화없이 운송조회</b>
             </Typography>
             <Typography
-              variant="body1"
-              align="center"
+              variant="h6"
+              align="left"
               color="text.secondary"
               paragraph
             >
@@ -115,17 +119,17 @@ const Part3 = () => {
           </Container>
           <Container>
             <Typography
-              component="h4"
-              variant="h4"
-              align="center"
+              component="h5"
+              variant="h5"
+              align="left"
               color="text.primary"
               gutterBottom
             >
               <b>센디 이커머스</b>
             </Typography>
             <Typography
-              variant="body1"
-              align="center"
+              variant="h6"
+              align="left"
               color="text.secondary"
               paragraph
             >
@@ -143,6 +147,21 @@ const Part3 = () => {
           </Container>
         </Stack>
       </Container>
+      <Box
+        sx={{
+          py: 3,
+          px: 2,
+          mt: "auto",
+          justifyContent: "center",
+          backgroundColor: (theme) =>
+            theme.palette.mode === "light"
+              ? theme.palette.grey[200]
+              : theme.palette.grey[800],
+        }}
+        display="flex"
+      >
+        <img src="assets\img-partners.png" alt="partners" />
+      </Box>
     </ThemeProvider>
   );
 };

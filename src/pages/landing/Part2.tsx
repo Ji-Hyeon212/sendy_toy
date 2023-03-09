@@ -6,17 +6,21 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import CssBaseline from "@mui/material/CssBaseline";
 import Grid from "@mui/material/Grid";
-import Stack from "@mui/material/Stack";
-import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import Link from "@mui/material/Link";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import Footer from "../../components/Layout/Footer/Footer";
-import Header from "../../components/Layout/Header/Header";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
-const theme = createTheme();
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#2e58ec",
+    },
+    secondary: {
+      main: "#f3f3f3",
+    },
+  },
+});
 
 const Part2 = () => {
   return (
@@ -73,7 +77,12 @@ const Part2 = () => {
                 </Typography>
               </CardContent>
               <CardActions>
-                <Button size="large" variant="contained" fullWidth>
+                <Button
+                  sx={{ mb: 2, mx: 2 }}
+                  size="large"
+                  variant="contained"
+                  fullWidth
+                >
                   예약하러 가기
                 </Button>
               </CardActions>
@@ -107,7 +116,12 @@ const Part2 = () => {
                 </Typography>
               </CardContent>
               <CardActions>
-                <Button size="large" variant="contained" fullWidth>
+                <Button
+                  sx={{ mb: 2, mx: 2 }}
+                  size="large"
+                  variant="contained"
+                  fullWidth
+                >
                   예약하러 가기
                 </Button>
               </CardActions>
@@ -141,7 +155,12 @@ const Part2 = () => {
                 </Typography>
               </CardContent>
               <CardActions>
-                <Button size="large" variant="contained" fullWidth>
+                <Button
+                  sx={{ mb: 2, mx: 2 }}
+                  size="large"
+                  variant="contained"
+                  fullWidth
+                >
                   예약하러 가기
                 </Button>
               </CardActions>

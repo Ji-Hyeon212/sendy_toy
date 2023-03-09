@@ -1,3 +1,4 @@
+//blog
 import * as React from "react";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -7,7 +8,7 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import Link from "@mui/material/Link";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+// import { ReactComponent as Blog } from "assets/_img-blog-thumbnails.svg";
 
 const theme = createTheme({
   palette: {
@@ -20,7 +21,7 @@ const theme = createTheme({
   },
 });
 
-const Part1 = () => {
+const Part7 = () => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -39,47 +40,47 @@ const Part1 = () => {
             justifyContent="center"
           >
             <Container maxWidth="md">
+              <img
+                src="assets/img-blog-thumbnails@2x.png"
+                alt="blog"
+                width="100%"
+              />
+            </Container>
+            <Container maxWidth="md">
               <Typography
-                component="h2"
-                variant="h2"
+                component="h3"
+                variant="h3"
                 align="left"
                 color="text.primary"
                 gutterBottom
               >
                 <b>
-                  화물운송이 <br />
-                  간편해집니다.
+                  센디 제품팀이 들려주는
+                  <br />
+                  화물 운송 이야기
                 </b>
               </Typography>
               <Typography
-                component="h4"
-                variant="h4"
+                component="h5"
+                variant="h5"
                 align="left"
                 color="text.primary"
                 paragraph
                 gutterBottom
               >
-                비용과 시간을 모두 아껴보세요
+                다양한 화물 운송 소식부터 센디 인사이트까지 센디의 모든 것을
+                이곳에서 만나보세요.
               </Typography>
-              <Box display={"flex"}>
+              <Container>
                 <Button
-                  sx={{ width: 240 }}
                   variant="contained"
                   size="large"
                   fullWidth
-                  endIcon={<ArrowForwardIosIcon />}
                   disableElevation
                 >
-                  지금 시작하기
+                  블로그 보러가기
                 </Button>
-              </Box>
-            </Container>
-            <Container maxWidth="lg">
-              <img
-                src="/assets/main-truck-woman.svg"
-                alt="random"
-                width="100%"
-              />
+              </Container>
             </Container>
           </Stack>
         </Container>
@@ -87,4 +88,5 @@ const Part1 = () => {
     </ThemeProvider>
   );
 };
-export default Part1;
+
+export default Part7;

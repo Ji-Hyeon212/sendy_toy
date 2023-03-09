@@ -1,6 +1,8 @@
+// 제휴 업체
 import * as React from "react";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
+import Grid from "@mui/material/Grid";
 import Stack from "@mui/material/Stack";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
@@ -20,7 +22,7 @@ const theme = createTheme({
   },
 });
 
-const Part1 = () => {
+const Part5 = () => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -40,15 +42,16 @@ const Part1 = () => {
           >
             <Container maxWidth="md">
               <Typography
-                component="h2"
-                variant="h2"
+                component="h1"
+                variant="h1"
                 align="left"
                 color="text.primary"
                 gutterBottom
               >
                 <b>
-                  화물운송이 <br />
-                  간편해집니다.
+                  많은 사용자들이 이미
+                  <br />
+                  센디와 함께하고 있습니다.
                 </b>
               </Typography>
               <Typography
@@ -59,27 +62,14 @@ const Part1 = () => {
                 paragraph
                 gutterBottom
               >
-                비용과 시간을 모두 아껴보세요
+                개인 운송뿐만 아니라 기업 운송까지, 지금 센디와 함께하세요.
               </Typography>
-              <Box display={"flex"}>
-                <Button
-                  sx={{ width: 240 }}
-                  variant="contained"
-                  size="large"
-                  fullWidth
-                  endIcon={<ArrowForwardIosIcon />}
-                  disableElevation
-                >
-                  지금 시작하기
-                </Button>
-              </Box>
+              {/* <Container>
+                슬라이드
+              </Container> */}
             </Container>
-            <Container maxWidth="lg">
-              <img
-                src="/assets/main-truck-woman.svg"
-                alt="random"
-                width="100%"
-              />
+            <Container maxWidth="xs">
+              <img src="assets\img-partner-man@2x.png" alt="random" />
             </Container>
           </Stack>
         </Container>
@@ -87,4 +77,4 @@ const Part1 = () => {
     </ThemeProvider>
   );
 };
-export default Part1;
+export default Part5;
