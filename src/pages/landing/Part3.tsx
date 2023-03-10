@@ -52,9 +52,13 @@ const Part3 = () => {
               만들어진 서비스입니다.
             </Typography>
           </Container>
-          <Container maxWidth="xs">
-            <img src="/assets/img-service-desk.png" alt="random" />
-          </Container>
+          <Box sx={{ justifyContent: "center" }} maxWidth="md" display={"flex"}>
+            <img
+              src="/assets/img-service-desk.png"
+              alt="random"
+              width={"100%"}
+            />
+          </Box>
         </Stack>
 
         <Stack
@@ -64,6 +68,7 @@ const Part3 = () => {
           justifyContent="center"
         >
           <Container>
+            <img src="assets/ic-ser-calc.png" alt="calc" />
             <Typography
               component="h5"
               variant="h5"
@@ -86,11 +91,13 @@ const Part3 = () => {
               size="large"
               endIcon={<ArrowForwardIosIcon />}
               disableElevation
+              disableRipple
             >
               <b>바로가기</b>
             </Button>
           </Container>
           <Container>
+            <img src="assets/ic-ser-location.png" alt="location" />
             <Typography
               component="h5"
               variant="h5"
@@ -113,11 +120,13 @@ const Part3 = () => {
               size="large"
               endIcon={<ArrowForwardIosIcon />}
               disableElevation
+              disableRipple
             >
               <b>바로가기</b>
             </Button>
           </Container>
           <Container>
+            <img src="assets/ic-ser-ecom.png" alt="ecom" />
             <Typography
               component="h5"
               variant="h5"
@@ -141,6 +150,7 @@ const Part3 = () => {
               size="large"
               endIcon={<ArrowForwardIosIcon />}
               disableElevation
+              disableRipple
             >
               <b>바로가기</b>
             </Button>
