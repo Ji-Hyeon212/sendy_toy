@@ -35,10 +35,10 @@ const Part1 = () => {
           <Stack
             sx={{ pt: 16 }}
             direction="row"
-            spacing={2}
+            spacing={1}
             justifyContent="center"
           >
-            <Container maxWidth="md">
+            <Container maxWidth="lg">
               <Typography
                 component="h2"
                 variant="h2"
@@ -52,8 +52,8 @@ const Part1 = () => {
                 </b>
               </Typography>
               <Typography
-                component="h4"
-                variant="h4"
+                component="h5"
+                variant="h5"
                 align="left"
                 color="text.primary"
                 paragraph
@@ -63,18 +63,19 @@ const Part1 = () => {
               </Typography>
               <Box display={"flex"}>
                 <Button
-                  sx={{ width: 240 }}
+                  sx={{ width: 240, height: 56 }}
                   variant="contained"
                   size="large"
                   fullWidth
                   endIcon={<ArrowForwardIosIcon />}
                   disableElevation
+                  disableRipple
                 >
                   지금 시작하기
                 </Button>
               </Box>
             </Container>
-            <Container maxWidth="lg">
+            <Container maxWidth="xl">
               <img
                 src="/assets/main-truck-woman.svg"
                 alt="random"
