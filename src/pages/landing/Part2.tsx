@@ -78,8 +78,13 @@ const Part2 = () => {
               </CardContent>
               <CardActions>
                 <Button
-                  sx={{ mb: 2, mx: 2 }}
-                  size="large"
+                  sx={{
+                    mb: 2,
+                    mx: 2,
+                    width: 240,
+                    height: 56,
+                    borderRadius: "12px",
+                  }}
                   variant="contained"
                   fullWidth
                 >
@@ -117,7 +122,13 @@ const Part2 = () => {
               </CardContent>
               <CardActions>
                 <Button
-                  sx={{ mb: 2, mx: 2 }}
+                  sx={{
+                    mb: 2,
+                    mx: 2,
+                    width: 240,
+                    height: 56,
+                    borderRadius: "12px",
+                  }}
                   size="large"
                   variant="contained"
                   fullWidth
@@ -156,7 +167,13 @@ const Part2 = () => {
               </CardContent>
               <CardActions>
                 <Button
-                  sx={{ mb: 2, mx: 2 }}
+                  sx={{
+                    mb: 2,
+                    mx: 2,
+                    width: 240,
+                    height: 56,
+                    borderRadius: "12px",
+                  }}
                   size="large"
                   variant="contained"
                   fullWidth
