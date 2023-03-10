@@ -4,7 +4,35 @@ import Box from "@mui/material/Box";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 // import { ReactComponent as Logo } from "./assets/sendy-logo-navy.svg";
-import { Stack, Toolbar } from "@mui/material";
+import {
+  createTheme,
+  CssBaseline,
+  Stack,
+  ThemeProvider,
+  Toolbar,
+} from "@mui/material";
+import { Container } from "@mui/system";
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#2e58ec",
+    },
+    secondary: {
+      main: "#f3f3f3",
+    },
+  },
+  components: {
+    MuiTabs: {
+      styleOverrides: {
+        indicator: {
+          backgroundColor: "white",
+          height: 3,
+        },
+      },
+    },
+  },
+});
 
 interface LinkTabProps {
   label?: string;
@@ -31,30 +59,44 @@ const Header = () => {
   };
 
   return (
-    <Toolbar className="flex justify-between">
-      {/* <Link to="/">
-        <Logo />
-      </Link> */}
-      <Box sx={{ width: "100%" }}>
-        <Tabs
-          value={value}
-          onChange={handleChange}
-          aria-label="nav tabs example"
-        >
-          <Stack direction="row" spacing={5}>
-            <Box>
-              <img src="assets/Logo-Navy.png" alt="blog" width="50%" />
-            </Box>
-            <LinkTab label="서비스" href="/" />
-            <LinkTab label="요금 안내" href="/" />
-            <LinkTab label="비용 계산기" href="/" />
-            <LinkTab label="고객센터" href="/" />
-            <LinkTab label="로그인" href="/" />
-            <LinkTab label="회원가입" href="/" />
-          </Stack>
-        </Tabs>
-      </Box>
-    </Toolbar>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Toolbar className="flex justify-between">
+        <Box sx={{ mt: 4, width: "100%" }}>
+          <Tabs
+            sx={{ width: "100%" }}
+            value={value}
+            onChange={handleChange}
+            aria-label="nav tabs example"
+          >
+            <Stack direction="row" spacing={30} sx={{ width: "100%" }}>
+              <Box>
+                <img
+                  src="assets/Logo-Navy.png"
+                  alt="blog"
+                  width="76"
+                  height="26"
+                />
+              </Box>
+              <Box>
+                <Tabs
+                  value={value}
+                  onChange={handleChange}
+                  aria-label="nav tabs example"
+                >
+                  <LinkTab label="서비스" href="/" />
+                  <LinkTab label="요금 안내" href="/" />
+                  <LinkTab label="비용 계산기" href="/" />
+                  <LinkTab label="고객센터" href="/" />
+                  <LinkTab label="로그인" href="/" />
+                  <LinkTab label="회원가입" href="/" />
+                </Tabs>
+              </Box>
+            </Stack>
+          </Tabs>
+        </Box>
+      </Toolbar>
+    </ThemeProvider>
   );
 };
 export default Header;
