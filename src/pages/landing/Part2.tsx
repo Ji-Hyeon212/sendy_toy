@@ -81,7 +81,7 @@ const Part2 = () => {
                   sx={{
                     mb: 2,
                     mx: 2,
-                    width: 240,
+                    width: 302,
                     height: 56,
                     borderRadius: "12px",
                   }}
@@ -125,7 +125,7 @@ const Part2 = () => {
                   sx={{
                     mb: 2,
                     mx: 2,
-                    width: 240,
+                    width: 302,
                     height: 56,
                     borderRadius: "12px",
                   }}
@@ -170,7 +170,7 @@ const Part2 = () => {
                   sx={{
                     mb: 2,
                     mx: 2,
-                    width: 240,
+                    width: 302,
                     height: 56,
                     borderRadius: "12px",
                   }}

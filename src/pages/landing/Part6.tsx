@@ -31,6 +31,17 @@ const Part6 = () => {
           pb: 30,
         }}
       >
+        <Box
+          sx={{
+            py: 3,
+            px: 2,
+            mt: "auto",
+            height: "437",
+            justifyContent: "center",
+            backgroundColor: theme.palette.primary.main,
+          }}
+        ></Box>
+
         <Container maxWidth="lg">
           <Stack
             sx={{ pt: 16 }}
@@ -38,10 +49,11 @@ const Part6 = () => {
             spacing={2}
             justifyContent="center"
           >
-            <Container>
+            <Container maxWidth="md">
+              <img src="assets/ic-section-mag.png" alt="mag" />
               <Typography
-                component="h1"
-                variant="h2"
+                component="h3"
+                variant="h3"
                 align="left"
                 color="text.primary"
                 gutterBottom
@@ -52,8 +64,8 @@ const Part6 = () => {
                 </b>
               </Typography>
               <Typography
-                component="h5"
-                variant="h5"
+                component="h6"
+                variant="h6"
                 align="left"
                 color="text.primary"
                 paragraph
@@ -62,19 +74,28 @@ const Part6 = () => {
                 센디 이용가이드에서 필요한 정보를 지금 바로 확인하세요.
               </Typography>
               <Button
+                sx={{ width: 240, height: 56 }}
                 variant="contained"
                 size="large"
                 fullWidth
                 disableElevation
+                disableRipple
               >
                 센디 가이드 전체 보기
               </Button>
             </Container>
             <Stack direction="column">
-              <Container>
+              <Container
+                sx={{
+                  backgroundColor: (theme) =>
+                    theme.palette.mode === "light"
+                      ? theme.palette.grey[200]
+                      : theme.palette.grey[800],
+                }}
+              >
                 <Typography
-                  component="h4"
-                  variant="h4"
+                  component="h6"
+                  variant="h6"
                   align="left"
                   color="text.primary"
                   gutterBottom
@@ -82,8 +103,7 @@ const Part6 = () => {
                   <b>어떤 차량으로 옮겨야 하죠?</b>
                 </Typography>
                 <Typography
-                  component="h5"
-                  variant="h5"
+                  variant="body2"
                   align="left"
                   color="text.primary"
                   paragraph
@@ -94,8 +114,8 @@ const Part6 = () => {
               </Container>
               <Container>
                 <Typography
-                  component="h4"
-                  variant="h4"
+                  component="h6"
+                  variant="h6"
                   align="left"
                   color="text.primary"
                   gutterBottom
@@ -103,8 +123,7 @@ const Part6 = () => {
                   <b>당일 운송 예약도 가능한가요?</b>
                 </Typography>
                 <Typography
-                  component="h5"
-                  variant="h5"
+                  variant="body2"
                   align="left"
                   color="text.primary"
                   paragraph
@@ -116,8 +135,8 @@ const Part6 = () => {
               </Container>
               <Container>
                 <Typography
-                  component="h4"
-                  variant="h4"
+                  component="h6"
+                  variant="h6"
                   align="left"
                   color="text.primary"
                   gutterBottom
@@ -125,8 +144,7 @@ const Part6 = () => {
                   <b>운송 예약 전 체크리스트</b>
                 </Typography>
                 <Typography
-                  component="h5"
-                  variant="h5"
+                  variant="body2"
                   align="left"
                   color="text.primary"
                   paragraph

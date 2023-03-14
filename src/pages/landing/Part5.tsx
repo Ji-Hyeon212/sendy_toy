@@ -41,9 +41,10 @@ const Part5 = () => {
             justifyContent="center"
           >
             <Container maxWidth="md">
+              <img src="assets/ic-section-partners.png" alt="building" />
               <Typography
-                component="h1"
-                variant="h1"
+                component="h3"
+                variant="h3"
                 align="left"
                 color="text.primary"
                 gutterBottom
@@ -55,8 +56,8 @@ const Part5 = () => {
                 </b>
               </Typography>
               <Typography
-                component="h4"
-                variant="h4"
+                component="h6"
+                variant="h6"
                 align="left"
                 color="text.primary"
                 paragraph
@@ -64,12 +65,28 @@ const Part5 = () => {
               >
                 개인 운송뿐만 아니라 기업 운송까지, 지금 센디와 함께하세요.
               </Typography>
+              <Box display={"flex"}>
+                <Button
+                  sx={{ width: 240, height: 56 }}
+                  variant="contained"
+                  size="large"
+                  fullWidth
+                  disableElevation
+                  disableRipple
+                >
+                  고객사례 전체보기
+                </Button>
+              </Box>
               {/* <Container>
                 슬라이드
               </Container> */}
             </Container>
             <Container maxWidth="xs">
-              <img src="assets\img-partner-man@2x.png" alt="random" />
+              <img
+                src="assets\img-partner-man@2x.png"
+                alt="random"
+                width={"100%"}
+              />
             </Container>
           </Stack>
         </Container>

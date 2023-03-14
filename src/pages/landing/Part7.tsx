@@ -61,8 +61,8 @@ const Part7 = () => {
                 </b>
               </Typography>
               <Typography
-                component="h5"
-                variant="h5"
+                component="h6"
+                variant="h6"
                 align="left"
                 color="text.primary"
                 paragraph
@@ -77,6 +77,7 @@ const Part7 = () => {
                   size="large"
                   fullWidth
                   disableElevation
+                  disableRipple
                 >
                   블로그 보러가기
                 </Button>

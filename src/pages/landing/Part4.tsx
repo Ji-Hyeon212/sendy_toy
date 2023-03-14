@@ -1,3 +1,4 @@
+//손 안에서 펼쳐지는 간편한 운송관리
 import * as React from "react";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -7,7 +8,6 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 const theme = createTheme({
   palette: {
@@ -32,7 +32,7 @@ const Part4 = () => {
         }}
       >
         <Container maxWidth="lg">
-          <Container>
+          <Container sx={{ mt: 5 }}>
             <Typography
               component="h3"
               variant="h3"
@@ -64,7 +64,7 @@ const Part4 = () => {
             justifyContent="center"
           >
             <Stack direction="column">
-              <Container sx={{ mb: 4 }}>
+              <Container sx={{ p: 3, mb: 4 }}>
                 <Typography
                   component="h5"
                   variant="h5"
@@ -86,7 +86,7 @@ const Part4 = () => {
                   확인하세요.
                 </Typography>
               </Container>
-              <Container sx={{ mb: 4 }}>
+              <Container sx={{ p: 3, mb: 4 }}>
                 <Typography
                   component="h5"
                   variant="h5"
@@ -107,7 +107,7 @@ const Part4 = () => {
                   카드를 간편하게 추가하고 편리하게 결제하세요.
                 </Typography>
               </Container>
-              <Container sx={{ mb: 4 }}>
+              <Container sx={{ p: 3, mb: 4 }}>
                 <Typography
                   component="h5"
                   variant="h5"
@@ -128,7 +128,7 @@ const Part4 = () => {
                   운송별 담당 기사님과 차량번호를 센디에서 바로 확인해보세요.
                 </Typography>
               </Container>
-              <Container sx={{ mb: 4 }}>
+              <Container sx={{ p: 3, mb: 4 }}>
                 <Typography
                   component="h5"
                   variant="h5"

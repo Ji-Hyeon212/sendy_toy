@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Link } from "react-router-dom";
+import { BrowserRouter, Link, Route } from "react-router-dom";
 import Box from "@mui/material/Box";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
@@ -8,10 +8,10 @@ import {
   createTheme,
   CssBaseline,
   Stack,
+  Switch,
   ThemeProvider,
   Toolbar,
 } from "@mui/material";
-import { Container } from "@mui/system";
 
 const theme = createTheme({
   palette: {
@@ -44,7 +44,7 @@ function LinkTab(props: LinkTabProps) {
     <Tab
       component="a"
       onClick={(event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-        event.preventDefault();
+        // event.preventDefault();
       }}
       {...props}
     />
@@ -69,11 +69,11 @@ const Header = () => {
             onChange={handleChange}
             aria-label="nav tabs example"
           >
-            <Stack direction="row" spacing={30} sx={{ width: "100%" }}>
+            <Stack direction="row" spacing={70} sx={{ width: "100%" }}>
               <Box>
                 <img
                   src="assets/Logo-Navy.png"
-                  alt="blog"
+                  alt="logo"
                   width="76"
                   height="26"
                 />
@@ -88,7 +88,10 @@ const Header = () => {
                   <LinkTab label="요금 안내" href="/" />
                   <LinkTab label="비용 계산기" href="/" />
                   <LinkTab label="고객센터" href="/" />
-                  <LinkTab label="로그인" href="/" />
+                  <LinkTab label="로그인" href="/login" />
+                  <Link to={"/login"} style={{ textDecoration: "none" }}>
+                    로그인
+                  </Link>
                   <LinkTab label="회원가입" href="/" />
                 </Tabs>
               </Box>

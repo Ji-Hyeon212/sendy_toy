@@ -52,7 +52,7 @@ const Part3 = () => {
               만들어진 서비스입니다.
             </Typography>
           </Container>
-          <Box sx={{ justifyContent: "center" }} maxWidth="md" display={"flex"}>
+          <Box sx={{ alignItems: "center" }} maxWidth="md" display={"flex"}>
             <img
               src="/assets/img-service-desk.png"
               alt="random"

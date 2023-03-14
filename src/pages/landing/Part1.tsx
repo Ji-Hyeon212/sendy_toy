@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import * as React from "react";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -5,9 +6,9 @@ import Stack from "@mui/material/Stack";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
-import Link from "@mui/material/Link";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import { Link, useNavigate } from "react-router-dom";
 
 const theme = createTheme({
   palette: {
@@ -19,6 +20,12 @@ const theme = createTheme({
     },
   },
 });
+
+// const navigate = useNavigate();
+
+// const navigateToLogin = () => {
+//   navigate("/login");
+// };
 
 const Part1 = () => {
   return (
@@ -62,17 +69,20 @@ const Part1 = () => {
                 비용과 시간을 모두 아껴보세요
               </Typography>
               <Box display={"flex"}>
-                <Button
-                  sx={{ width: 240, height: 56 }}
-                  variant="contained"
-                  size="large"
-                  fullWidth
-                  endIcon={<ArrowForwardIosIcon />}
-                  disableElevation
-                  disableRipple
-                >
-                  지금 시작하기
-                </Button>
+                <Link to={"/login"}>
+                  <Button
+                    //onClick={navigateToLogin}
+                    sx={{ width: 240, height: 56 }}
+                    variant="contained"
+                    size="large"
+                    fullWidth
+                    endIcon={<ArrowForwardIosIcon />}
+                    disableElevation
+                    disableRipple
+                  >
+                    지금 시작하기
+                  </Button>
+                </Link>
               </Box>
             </Container>
             <Container maxWidth="xl">
