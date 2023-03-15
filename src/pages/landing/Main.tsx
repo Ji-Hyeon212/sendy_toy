@@ -11,7 +11,7 @@ import Part5 from "./Part5";
 import Part6 from "./Part6";
 import Part7 from "./Part7";
 import Login from "./Login";
-import CalcCost from "./calcCost";
+import CalcCost from "./CalcCost";
 
 const theme = createTheme();
 

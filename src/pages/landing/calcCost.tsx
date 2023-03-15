@@ -55,8 +55,11 @@ const SelectButton = styled(Button)({
   },
 });
 
-const calcCost = () => {
-  //const [carType, setCarType] = useState{''};
+const CalcCost = () => {
+  const [carType, setCarType] = useState("라보");
+  const [transportTime, setTransportTime] = useState("주간");
+  const [transportOption, setTransportOption] = useState("차량만");
+  const [isBtnClicked, setisBtnClicked] = useState(false);
 
   return (
     <ThemeProvider theme={theme}>
@@ -129,24 +132,44 @@ const calcCost = () => {
                 <Typography fontSize={18} align="left">
                   차량을 선택해주세요.
                 </Typography>
-                <Grid container>
+                <Grid container spacing={1}>
                   <Grid item xs={3}>
-                    <SelectButton variant="outlined" fullWidth>
+                    <SelectButton
+                      variant="outlined"
+                      fullWidth
+                      disableRipple
+                      onClick={() => setCarType("다마스")}
+                    >
                       다마스
                     </SelectButton>
                   </Grid>
                   <Grid item xs={3}>
-                    <SelectButton variant="outlined" fullWidth>
+                    <SelectButton
+                      variant="outlined"
+                      fullWidth
+                      disableRipple
+                      onClick={() => setCarType("라보")}
+                    >
                       라보
                     </SelectButton>
                   </Grid>
                   <Grid item xs={3}>
-                    <SelectButton variant="outlined" fullWidth>
+                    <SelectButton
+                      variant="outlined"
+                      fullWidth
+                      disableRipple
+                      onClick={() => setCarType("1톤 카고")}
+                    >
                       1톤 카고
                     </SelectButton>
                   </Grid>
                   <Grid item xs={3}>
-                    <SelectButton variant="outlined" fullWidth>
+                    <SelectButton
+                      variant="outlined"
+                      fullWidth
+                      disableRipple
+                      onClick={() => setisBtnClicked(true)}
+                    >
                       기타
                     </SelectButton>
                   </Grid>
@@ -162,6 +185,7 @@ const calcCost = () => {
                       variant="outlined"
                       startIcon={<WbSunnyIcon />}
                       fullWidth
+                      onClick={() => setTransportTime("주간")}
                     >
                       <Typography>주간</Typography>
                       <Typography>08:00 ~ 18:00</Typography>
@@ -172,6 +196,7 @@ const calcCost = () => {
                       variant="outlined"
                       startIcon={<Brightness3Icon />}
                       fullWidth
+                      onClick={() => setTransportTime("야간")}
                     >
                       <Typography>야간</Typography>
                       <Typography>18:00 ~ 08:00</Typography>{" "}
@@ -185,22 +210,38 @@ const calcCost = () => {
                 </Typography>
                 <Grid container>
                   <Grid item xs={3}>
-                    <SelectButton variant="outlined" fullWidth>
+                    <SelectButton
+                      variant="outlined"
+                      fullWidth
+                      onClick={() => setTransportOption("차량만")}
+                    >
                       본인이 직접 옮김
                     </SelectButton>
                   </Grid>
                   <Grid item xs={3}>
-                    <SelectButton variant="outlined" fullWidth>
+                    <SelectButton
+                      variant="outlined"
+                      fullWidth
+                      onClick={() => setTransportOption("상하차")}
+                    >
                       상하차만 도움
                     </SelectButton>
                   </Grid>
                   <Grid item xs={3}>
-                    <SelectButton variant="outlined" fullWidth>
+                    <SelectButton
+                      variant="outlined"
+                      fullWidth
+                      onClick={() => setTransportOption("상하차 및 운반")}
+                    >
                       상하차 및 운반 도움
                     </SelectButton>
                   </Grid>
                   <Grid item xs={3}>
-                    <SelectButton variant="outlined" fullWidth>
+                    <SelectButton
+                      variant="outlined"
+                      fullWidth
+                      onClick={() => setTransportOption("기사 + 인부 1명")}
+                    >
                       운반 도움+인부 1명
                     </SelectButton>
                   </Grid>
@@ -213,31 +254,36 @@ const calcCost = () => {
                 <Typography>비용 계산 결과</Typography>
                 <Button>초기화</Button>
               </Stack>
-              <Stack direction={"column"} borderColor={"lightgray"}>
-                <Stack direction={"row"}>
-                  <TrendingUpIcon />
-                  <Typography>이동거리</Typography>
+              <Box sx={{ borderColor: "lightgray" }}>
+                <Stack direction={"column"}>
+                  <Stack direction={"row"}>
+                    <TrendingUpIcon />
+                    <Typography>이동거리</Typography>
+                  </Stack>
+                  <Stack direction={"row"}>
+                    <LocalShippingIcon />
+                    <Typography>차량</Typography>
+                    <Box>{carType}</Box>
+                  </Stack>
+                  <Stack direction={"row"}>
+                    <AccessTimeIcon />
+                    <Typography>운송 시간</Typography>
+                    <Box>{transportTime}</Box>
+                  </Stack>
+                  <Stack direction={"row"}>
+                    <LocationOnIcon />
+                    <Typography>운송 옵션</Typography>
+                    <Box>{transportOption}</Box>
+                  </Stack>
+                  <hr />
+                  <Stack direction={"row"}>
+                    <Typography>용달 비용</Typography>
+                  </Stack>
+                  <Button variant="contained">
+                    센디 첫 운송 5천 원 할인 받기
+                  </Button>
                 </Stack>
-                <Stack direction={"row"}>
-                  <LocalShippingIcon />
-                  <Typography>차량</Typography>
-                </Stack>
-                <Stack direction={"row"}>
-                  <AccessTimeIcon />
-                  <Typography>운송 시간</Typography>
-                </Stack>
-                <Stack direction={"row"}>
-                  <LocationOnIcon />
-                  <Typography>운송 옵션</Typography>
-                </Stack>
-                <hr />
-                <Stack direction={"row"}>
-                  <Typography>용달 비용</Typography>
-                </Stack>
-                <Button variant="contained">
-                  센디 첫 운송 5천 원 할인 받기
-                </Button>
-              </Stack>
+              </Box>
             </Stack>
           </Stack>
         </Box>
@@ -246,4 +292,4 @@ const calcCost = () => {
   );
 };
 
-export default calcCost;
+export default CalcCost;
