@@ -8,8 +8,8 @@ import CssBaseline from "@mui/material/CssBaseline";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
-import Link from "@mui/material/Link";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { Link } from "react-router-dom";
 
 const theme = createTheme({
   palette: {
@@ -77,19 +77,21 @@ const Part2 = () => {
                 </Typography>
               </CardContent>
               <CardActions>
-                <Button
-                  sx={{
-                    mb: 2,
-                    mx: 2,
-                    width: 302,
-                    height: 56,
-                    borderRadius: "12px",
-                  }}
-                  variant="contained"
-                  fullWidth
-                >
-                  예약하러 가기
-                </Button>
+                <Link to={"/login"}>
+                  <Button
+                    sx={{
+                      mb: 2,
+                      mx: 2,
+                      width: 302,
+                      height: 56,
+                      borderRadius: "12px",
+                    }}
+                    variant="contained"
+                    fullWidth
+                  >
+                    예약하러 가기
+                  </Button>
+                </Link>
               </CardActions>
             </Card>
           </Grid>
@@ -121,20 +123,22 @@ const Part2 = () => {
                 </Typography>
               </CardContent>
               <CardActions>
-                <Button
-                  sx={{
-                    mb: 2,
-                    mx: 2,
-                    width: 302,
-                    height: 56,
-                    borderRadius: "12px",
-                  }}
-                  size="large"
-                  variant="contained"
-                  fullWidth
-                >
-                  예약하러 가기
-                </Button>
+                <Link to={"/login"}>
+                  <Button
+                    sx={{
+                      mb: 2,
+                      mx: 2,
+                      width: 302,
+                      height: 56,
+                      borderRadius: "12px",
+                    }}
+                    size="large"
+                    variant="contained"
+                    fullWidth
+                  >
+                    예약하러 가기
+                  </Button>
+                </Link>
               </CardActions>
             </Card>
           </Grid>
@@ -166,20 +170,22 @@ const Part2 = () => {
                 </Typography>
               </CardContent>
               <CardActions>
-                <Button
-                  sx={{
-                    mb: 2,
-                    mx: 2,
-                    width: 302,
-                    height: 56,
-                    borderRadius: "12px",
-                  }}
-                  size="large"
-                  variant="contained"
-                  fullWidth
-                >
-                  예약하러 가기
-                </Button>
+                <Link to={"/login"}>
+                  <Button
+                    sx={{
+                      mb: 2,
+                      mx: 2,
+                      width: 302,
+                      height: 56,
+                      borderRadius: "12px",
+                    }}
+                    size="large"
+                    variant="contained"
+                    fullWidth
+                  >
+                    예약하러 가기
+                  </Button>
+                </Link>
               </CardActions>
             </Card>
           </Grid>
