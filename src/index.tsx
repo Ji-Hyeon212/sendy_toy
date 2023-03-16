@@ -5,6 +5,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from "./pages/landing/Login";
+import CalcCost from "./pages/landing/CalcCost";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -15,6 +16,7 @@ root.render(
       <Routes>
         <Route path="/" element={<App />}></Route>
         <Route path="/login" element={<Login />}></Route>
+        <Route path="/calccost" element={<CalcCost />}></Route>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

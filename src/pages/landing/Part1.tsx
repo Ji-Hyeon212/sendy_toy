@@ -8,7 +8,7 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const theme = createTheme({
   palette: {
@@ -20,12 +20,6 @@ const theme = createTheme({
     },
   },
 });
-
-// const navigate = useNavigate();
-
-// const navigateToLogin = () => {
-//   navigate("/login");
-// };
 
 const Part1 = () => {
   return (
@@ -71,7 +65,6 @@ const Part1 = () => {
               <Box display={"flex"}>
                 <Link to={"/login"}>
                   <Button
-                    //onClick={navigateToLogin}
                     sx={{ width: 240, height: 56 }}
                     variant="contained"
                     size="large"

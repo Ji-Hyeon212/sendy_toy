@@ -120,9 +120,14 @@ const CalcCost = () => {
                     onChange={(e) => {
                       setDeparture(e.target.value);
                       console.log(departure);
-                      <Address searchAddr={departure} />;
                     }}
                   ></TextField>
+                  <Address
+                    keyword={departure}
+                    currentPage={"1"}
+                    countPerPage={"5"}
+                    resultType={JSON}
+                  />
                 </Box>
                 <Box marginTop="10px">
                   <TextField
