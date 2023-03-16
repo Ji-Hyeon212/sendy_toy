@@ -86,12 +86,9 @@ const Header = () => {
                 >
                   <LinkTab label="서비스" href="/" />
                   <LinkTab label="요금 안내" href="/" />
-                  <LinkTab label="비용 계산기" href="/" />
+                  <LinkTab label="비용 계산기" href="/colccost" />
                   <LinkTab label="고객센터" href="/" />
                   <LinkTab label="로그인" href="/login" />
-                  <Link to={"/login"} style={{ textDecoration: "none" }}>
-                    로그인
-                  </Link>
                   <LinkTab label="회원가입" href="/" />
                 </Tabs>
               </Box>

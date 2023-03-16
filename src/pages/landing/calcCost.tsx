@@ -21,6 +21,8 @@ import TrendingUpIcon from "@mui/icons-material/TrendingUp";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import AddLocationIcon from "@mui/icons-material/AddLocation";
+import AddressList from "../../components/Address/AddressList";
+import Address from "../../components/Address/Address";
 
 const theme = createTheme({
   palette: {
@@ -59,7 +61,9 @@ const CalcCost = () => {
   const [carType, setCarType] = useState("라보");
   const [transportTime, setTransportTime] = useState("주간");
   const [transportOption, setTransportOption] = useState("차량만");
-  const [isBtnClicked, setisBtnClicked] = useState(false);
+  //const [isBtnClicked, setisBtnClicked] = useState(false);
+  const [departure, setDeparture] = useState("");
+  const [destination, setDestination] = useState("");
 
   return (
     <ThemeProvider theme={theme}>
@@ -112,6 +116,12 @@ const CalcCost = () => {
                     }}
                     placeholder="출발지를 입력해주세요."
                     fullWidth
+                    value={departure}
+                    onChange={(e) => {
+                      setDeparture(e.target.value);
+                      console.log(departure);
+                      <Address searchAddr={departure} />;
+                    }}
                   ></TextField>
                 </Box>
                 <Box marginTop="10px">
@@ -125,6 +135,7 @@ const CalcCost = () => {
                     }}
                     placeholder="도착지를 입력해주세요."
                     fullWidth
+                    // value={destination}
                   ></TextField>
                 </Box>
               </Box>
@@ -168,7 +179,7 @@ const CalcCost = () => {
                       variant="outlined"
                       fullWidth
                       disableRipple
-                      onClick={() => setisBtnClicked(true)}
+                      //onClick={() => setisBtnClicked(true)}
                     >
                       기타
                     </SelectButton>
@@ -268,7 +279,7 @@ const CalcCost = () => {
                   <Stack direction={"row"}>
                     <AccessTimeIcon />
                     <Typography>운송 시간</Typography>
-                    <Box>{transportTime}</Box>
+                    <Box sx={{ pl: "10" }}>{transportTime}</Box>
                   </Stack>
                   <Stack direction={"row"}>
                     <LocationOnIcon />
