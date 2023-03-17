@@ -70,14 +70,17 @@ const Header = () => {
             aria-label="nav tabs example"
           >
             <Stack direction="row" spacing={70} sx={{ width: "100%" }}>
-              <Box>
-                <img
-                  src="assets/Logo-Navy.png"
-                  alt="logo"
-                  width="76"
-                  height="26"
-                />
-              </Box>
+              <Link to="/">
+                <Box>
+                  <img
+                    src="assets/Logo-Navy.png"
+                    alt="logo"
+                    width="76"
+                    height="26"
+                  />
+                </Box>
+              </Link>
+
               <Box>
                 <Tabs
                   value={value}
@@ -86,9 +89,13 @@ const Header = () => {
                 >
                   <LinkTab label="서비스" href="/" />
                   <LinkTab label="요금 안내" href="/" />
-                  <LinkTab label="비용 계산기" href="/colccost" />
+                  <Link to="/calccost" style={{ textDecoration: "none" }}>
+                    <LinkTab label="비용 계산기" />
+                  </Link>
                   <LinkTab label="고객센터" href="/" />
-                  <LinkTab label="로그인" href="/login" />
+                  <Link to="/login" style={{ textDecoration: "none" }}>
+                    <LinkTab label="로그인" />
+                  </Link>
                   <LinkTab label="회원가입" href="/" />
                 </Tabs>
               </Box>

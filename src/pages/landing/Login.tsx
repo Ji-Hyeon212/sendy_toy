@@ -4,13 +4,15 @@ import {
   createTheme,
   CssBaseline,
   Grid,
-  Link,
   TextField,
   ThemeProvider,
   Typography,
 } from "@mui/material";
 import { Box, Stack } from "@mui/system";
 import React from "react";
+import { Link } from "react-router-dom";
+import Footer from "../../components/Layout/Footer/Footer";
+import Header from "../../components/Layout/Header/Header";
 
 const theme = createTheme({
   palette: {
@@ -43,7 +45,7 @@ function Copyright() {
     <Box textAlign={"center"}>
       <Typography sx={{ mt: 5, mb: 20 }} variant="body2" color="text.secondary">
         {"Copyright. "}
-        <Link color="inherit" href="https://sendy.ai/">
+        <Link color="inherit" to="https://sendy.ai/">
           Sendy Crop.
         </Link>{" "}
         All rights reserved.
@@ -56,6 +58,7 @@ const Login = () => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
+      <Header />
       <Container maxWidth="xs" sx={{ mt: "100" }}>
         <Box sx={{ textAlign: "center" }}>
           <Box maxWidth="xs" marginTop={13}>
@@ -65,7 +68,7 @@ const Login = () => {
             <b>용달이 필요한 순간, 센디</b>
           </Typography>
           <Typography variant="body2" marginTop={2}>
-            아직 회원이 아니신가요? <Link href="/">회원가입하기</Link>
+            아직 회원이 아니신가요? <Link to={"/"}>회원가입하기</Link>
           </Typography>
         </Box>
         <Container sx={{ textAlign: "center" }}>
@@ -147,12 +150,13 @@ const Login = () => {
         </Grid>
         <Box sx={{ textAlign: "center" }}>
           <Typography variant="body2" marginTop={3} marginBottom={15}>
-            <Link href="/">비밀번호를 잊으셨나요?</Link>
+            <Link to="/">비밀번호를 잊으셨나요?</Link>
           </Typography>
         </Box>
       </Container>
       <hr color="lightgray" />
       <Copyright />
+      <Footer />
     </ThemeProvider>
   );
 };
