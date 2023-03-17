@@ -21,7 +21,6 @@ import TrendingUpIcon from "@mui/icons-material/TrendingUp";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import AddLocationIcon from "@mui/icons-material/AddLocation";
-import AddressList from "../../components/Address/AddressList";
 import Address from "../../components/Address/Address";
 
 const theme = createTheme({
