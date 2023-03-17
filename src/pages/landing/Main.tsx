@@ -21,15 +21,15 @@ const Main = () => {
       <CssBaseline />
       <Header />
       <main>
-        {/* <Part1 />
+        <Part1 />
         <Part2 />
         <Part3 />
         <Part4 />
         <Part5 />
         <Part6 />
-        <Part7 /> */}
+        <Part7 />
         {/* <Login /> */}
-        <CalcCost />
+        {/* <CalcCost /> */}
       </main>
       <Footer />
     </ThemeProvider>

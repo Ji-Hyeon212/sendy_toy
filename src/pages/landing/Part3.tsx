@@ -52,7 +52,7 @@ const Part3 = () => {
               만들어진 서비스입니다.
             </Typography>
           </Container>
-          <Box sx={{ alignItems: "center" }} maxWidth="md" display={"flex"}>
+          <Box sx={{ textAlign: "center" }} maxWidth="md">
             <img
               src="/assets/img-service-desk.png"
               alt="random"
@@ -86,7 +86,7 @@ const Part3 = () => {
             >
               운송일과 상하차지를 입력하고 실시간 센디 요금을 바로 확인하세요.
             </Typography>
-            <Link to={"/calccost"}>
+            <Link to={"/calccost"} style={{ textDecoration: "none" }}>
               <Button
                 variant="text"
                 size="large"

@@ -300,7 +300,7 @@ const CalcCost = () => {
                     <Box sx={{ pl: "10" }}>{transportTime}</Box>
                   </Stack>
                   <Stack direction={"row"}>
-                    <LocationOnIcon />
+                    <AddLocationIcon />
                     <Typography>운송 옵션</Typography>
                     <Box>{transportOption}</Box>
                   </Stack>

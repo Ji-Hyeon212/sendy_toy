@@ -77,7 +77,7 @@ const Part2 = () => {
                 </Typography>
               </CardContent>
               <CardActions>
-                <Link to={"/login"}>
+                <Link to={"/login"} style={{ textDecoration: "none" }}>
                   <Button
                     sx={{
                       mb: 2,
@@ -123,7 +123,7 @@ const Part2 = () => {
                 </Typography>
               </CardContent>
               <CardActions>
-                <Link to={"/login"}>
+                <Link to={"/login"} style={{ textDecoration: "none" }}>
                   <Button
                     sx={{
                       mb: 2,
@@ -170,7 +170,7 @@ const Part2 = () => {
                 </Typography>
               </CardContent>
               <CardActions>
-                <Link to={"/login"}>
+                <Link to={"/login"} style={{ textDecoration: "none" }}>
                   <Button
                     sx={{
                       mb: 2,

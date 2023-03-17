@@ -87,16 +87,24 @@ const Header = () => {
                   onChange={handleChange}
                   aria-label="nav tabs example"
                 >
-                  <LinkTab label="서비스" href="/" />
-                  <LinkTab label="요금 안내" href="/" />
+                  <Link to="/" style={{ textDecoration: "none" }}>
+                    <LinkTab label="서비스" href="/" />
+                  </Link>
+                  <Link to="/" style={{ textDecoration: "none" }}>
+                    <LinkTab label="요금 안내" href="/" />
+                  </Link>
                   <Link to="/calccost" style={{ textDecoration: "none" }}>
                     <LinkTab label="비용 계산기" />
                   </Link>
-                  <LinkTab label="고객센터" href="/" />
+                  <Link to="/" style={{ textDecoration: "none" }}>
+                    <LinkTab label="고객센터" href="/" />
+                  </Link>
                   <Link to="/login" style={{ textDecoration: "none" }}>
                     <LinkTab label="로그인" />
                   </Link>
-                  <LinkTab label="회원가입" href="/" />
+                  <Link to="/" style={{ textDecoration: "none" }}>
+                    <LinkTab label="회원가입" href="/" />
+                  </Link>
                 </Tabs>
               </Box>
             </Stack>
