@@ -63,7 +63,7 @@ const Part1 = () => {
                 비용과 시간을 모두 아껴보세요
               </Typography>
               <Box display={"flex"}>
-                <Link to={"/login"}>
+                <Link to={"/login"} style={{ textDecoration: "none" }}>
                   <Button
                     sx={{ width: 240, height: 56 }}
                     variant="contained"

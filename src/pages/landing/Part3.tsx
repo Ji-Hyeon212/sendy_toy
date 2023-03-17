@@ -4,10 +4,10 @@ import CssBaseline from "@mui/material/CssBaseline";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
-import Link from "@mui/material/Link";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { Box } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const theme = createTheme({
   palette: {
@@ -86,15 +86,17 @@ const Part3 = () => {
             >
               운송일과 상하차지를 입력하고 실시간 센디 요금을 바로 확인하세요.
             </Typography>
-            <Button
-              variant="text"
-              size="large"
-              endIcon={<ArrowForwardIosIcon />}
-              disableElevation
-              disableRipple
-            >
-              <b>바로가기</b>
-            </Button>
+            <Link to={"/calccost"}>
+              <Button
+                variant="text"
+                size="large"
+                endIcon={<ArrowForwardIosIcon />}
+                disableElevation
+                disableRipple
+              >
+                <b>바로가기</b>
+              </Button>
+            </Link>
           </Container>
           <Container>
             <img src="assets/ic-ser-location.png" alt="location" />
