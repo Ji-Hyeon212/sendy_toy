@@ -5,6 +5,7 @@ import {
   Container,
   createTheme,
   CssBaseline,
+  Divider,
   Grid,
   InputAdornment,
   styled,
@@ -22,6 +23,8 @@ import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import AddLocationIcon from "@mui/icons-material/AddLocation";
 import Address from "../../components/Address/Address";
+import Header from "../../components/Layout/Header/Header";
+import Footer from "../../components/Layout/Footer/Footer";
 
 const theme = createTheme({
   palette: {
@@ -67,6 +70,7 @@ const CalcCost = () => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
+      <Header />
       <Box sx={{ pt: "54px", pb: "31px", width: "100%", bgcolor: "#F7F8FE" }}>
         <Container maxWidth="md">
           <Typography fontSize="18px" color={"#727272"} align="center">
@@ -139,8 +143,18 @@ const CalcCost = () => {
                     }}
                     placeholder="도착지를 입력해주세요."
                     fullWidth
-                    // value={destination}
+                    value={destination}
+                    onChange={(e) => {
+                      setDestination(e.target.value);
+                      console.log(destination);
+                    }}
                   ></TextField>
+                  <Address
+                    keyword={destination}
+                    currentPage={"1"}
+                    countPerPage={"5"}
+                    resultType={JSON}
+                  />
                 </Box>
               </Box>
               <Box>
@@ -290,11 +304,11 @@ const CalcCost = () => {
                     <Typography>운송 옵션</Typography>
                     <Box>{transportOption}</Box>
                   </Stack>
-                  <hr />
+                  <Divider />
                   <Stack direction={"row"}>
                     <Typography>용달 비용</Typography>
                   </Stack>
-                  <Button variant="contained">
+                  <Button sx={{ height: 56 }} variant="contained">
                     센디 첫 운송 5천 원 할인 받기
                   </Button>
                 </Stack>
@@ -303,6 +317,7 @@ const CalcCost = () => {
           </Stack>
         </Box>
       </Container>
+      <Footer />
     </ThemeProvider>
   );
 };
