@@ -6,8 +6,12 @@ import {
   createTheme,
   CssBaseline,
   Divider,
+  FormControl,
   Grid,
   InputAdornment,
+  InputLabel,
+  MenuItem,
+  Select,
   styled,
   TextField,
   ThemeProvider,
@@ -64,10 +68,10 @@ const CalcCost = () => {
   const [carType, setCarType] = useState("1톤 카고");
   const [transportTime, setTransportTime] = useState("주간");
   const [transportOption, setTransportOption] = useState("차량만");
-  //const [isBtnClicked, setisBtnClicked] = useState(false);
+  const [isBtnClicked, setisBtnClicked] = useState(false);
   const [departure, setDeparture] = useState("");
   const [destination, setDestination] = useState("");
-  const [distance, setDistance] = useState("");
+  const [distance, setDistance] = useState("-");
   const [cost, setCost] = useState("-");
 
   return (
@@ -202,7 +206,9 @@ const CalcCost = () => {
                       variant="outlined"
                       fullWidth
                       disableRipple
-                      //onClick={() => setisBtnClicked(true)}
+                      onClick={() => {
+                        setisBtnClicked(true);
+                      }}
                     >
                       기타
                     </SelectButton>
