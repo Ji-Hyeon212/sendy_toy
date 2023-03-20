@@ -9,7 +9,8 @@ interface searchType {
   currentPage: string;
   countPerPage: string;
   resultType: JSON;
-  setInput: React.Dispatch<React.SetStateAction<string>>;
+  setRoad: React.Dispatch<React.SetStateAction<string>>;
+  setJibun: React.Dispatch<React.SetStateAction<string>>;
 }
 
 const Address = ({
@@ -17,7 +18,8 @@ const Address = ({
   currentPage,
   countPerPage,
   resultType,
-  setInput,
+  setRoad,
+  setJibun,
 }: searchType) => {
   const [addresses, setAddresses] = useState([]);
   const temp = new FormData();
@@ -39,7 +41,11 @@ const Address = ({
   }, [keyword]);
   return (
     <div>
-      <AddressList addresses={addresses} setInput={setInput} />
+      <AddressList
+        addresses={addresses}
+        setRoad={setRoad}
+        setJibun={setJibun}
+      />
     </div>
   );
 };

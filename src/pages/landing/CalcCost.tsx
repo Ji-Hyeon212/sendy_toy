@@ -22,9 +22,11 @@ import TrendingUpIcon from "@mui/icons-material/TrendingUp";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import AddLocationIcon from "@mui/icons-material/AddLocation";
+import Footer from "../../components/Layout/Footer/Footer";
 import Address from "../../components/Address/Address";
 import Header from "../../components/Layout/Header/Header";
-import Footer from "../../components/Layout/Footer/Footer";
+import Distance from "../../components/Address/Distance";
+import AddressList from "../../components/Address/AddressList";
 
 const theme = createTheme({
   palette: {
@@ -66,7 +68,9 @@ const CalcCost = () => {
   const [transportOption, setTransportOption] = useState("차량만");
   const [isBtnClicked, setisBtnClicked] = useState(false);
   const [departure, setDeparture] = useState("");
+  const [jibunDeparture, setJibunDeparture] = useState("");
   const [destination, setDestination] = useState("");
+  const [jibunDestination, setJibunDestination] = useState("");
   const [distance, setDistance] = useState("-");
   const [cost, setCost] = useState("-");
 
@@ -133,7 +137,8 @@ const CalcCost = () => {
                     currentPage={"1"}
                     countPerPage={"5"}
                     resultType={JSON}
-                    setInput={setDeparture}
+                    setRoad={setDeparture}
+                    setJibun={setJibunDeparture}
                   />
                 </Box>
                 <Box marginTop="10px">
@@ -158,7 +163,8 @@ const CalcCost = () => {
                     currentPage={"1"}
                     countPerPage={"5"}
                     resultType={JSON}
-                    setInput={setDestination}
+                    setRoad={setDestination}
+                    setJibun={setJibunDestination}
                   />
                 </Box>
               </Box>
@@ -295,7 +301,14 @@ const CalcCost = () => {
                   <Stack direction={"row"}>
                     <TrendingUpIcon />
                     <Typography>이동거리</Typography>
-                    <Box>{distance}</Box>
+                    {departure && destination ? (
+                      <Distance
+                        jibunDeparture={jibunDeparture}
+                        roadDeparture={departure}
+                        jibunDestination={jibunDestination}
+                        roadDestination={destination}
+                      />
+                    ) : null}
                   </Stack>
                   <Stack direction={"row"}>
                     <LocalShippingIcon />
