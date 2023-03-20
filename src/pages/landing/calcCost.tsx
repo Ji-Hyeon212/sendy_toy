@@ -8,8 +8,6 @@ import {
   Divider,
   Grid,
   InputAdornment,
-  InputLabel,
-  Select,
   styled,
   TextField,
   ThemeProvider,
