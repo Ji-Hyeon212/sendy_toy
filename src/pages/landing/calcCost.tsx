@@ -299,7 +299,7 @@ const CalcCost = () => {
                   <Stack direction={"row"}>
                     <TrendingUpIcon />
                     <Typography>이동거리</Typography>
-                    <Box>{cost}</Box>
+                    <Box>{distance}</Box>
                   </Stack>
                   <Stack direction={"row"}>
                     <LocalShippingIcon />
@@ -319,6 +319,7 @@ const CalcCost = () => {
                   <Divider />
                   <Stack direction={"row"}>
                     <Typography>용달 비용</Typography>
+                    <Box>{cost}</Box>
                   </Stack>
                   <Button sx={{ height: 56 }} variant="contained">
                     센디 첫 운송 5천 원 할인 받기
