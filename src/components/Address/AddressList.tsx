@@ -8,16 +8,21 @@ interface addressType {
 }
 
 const index = [0, 1, 2, 3, 4];
-const AddressList = ({ addresses }: any) => {
+const AddressList = ({ addresses, setInput }: any) => {
   return (
     <div>
       {addresses.map(({ roadAddr, jibunAddr }: addressType) => {
         return (
-          <div key={index.toString()} onClick={() => {}}>
-            <Box sx={{ borderColor: "#f3f3f3" }}>
-              <Typography variant="body2">{roadAddr}</Typography>
-              <Typography variant="body2">{jibunAddr}</Typography>
-            </Box>
+          <div
+            key={index.toString()}
+            onClick={() => {
+              setInput(roadAddr);
+            }}
+          >
+            <Typography variant="body2">
+              <b>{roadAddr}</b>
+            </Typography>
+            <Typography variant="body2">{jibunAddr}</Typography>
           </div>
         );
       })}

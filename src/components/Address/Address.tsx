@@ -9,6 +9,7 @@ interface searchType {
   currentPage: string;
   countPerPage: string;
   resultType: JSON;
+  setInput: React.Dispatch<React.SetStateAction<string>>;
 }
 
 const Address = ({
@@ -16,6 +17,7 @@ const Address = ({
   currentPage,
   countPerPage,
   resultType,
+  setInput,
 }: searchType) => {
   const [addresses, setAddresses] = useState([]);
   const temp = new FormData();
@@ -34,10 +36,10 @@ const Address = ({
       .catch((error) => {
         console.log(error);
       });
-  }, [temp]);
+  }, [keyword]);
   return (
     <div>
-      <AddressList addresses={addresses} />
+      <AddressList addresses={addresses} setInput={setInput} />
     </div>
   );
 };
