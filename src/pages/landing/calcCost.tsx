@@ -45,6 +45,7 @@ const SelectButton = styled(Button)({
   textTransform: "none",
   fontSize: 16,
   color: "lightgray",
+  height: 54,
   marginBottom: "8px",
   variant: "outlined",
   borderColor: "lightgray",
@@ -60,12 +61,14 @@ const SelectButton = styled(Button)({
 });
 
 const CalcCost = () => {
-  const [carType, setCarType] = useState("라보");
+  const [carType, setCarType] = useState("1톤 카고");
   const [transportTime, setTransportTime] = useState("주간");
   const [transportOption, setTransportOption] = useState("차량만");
   //const [isBtnClicked, setisBtnClicked] = useState(false);
   const [departure, setDeparture] = useState("");
   const [destination, setDestination] = useState("");
+  const [distance, setDistance] = useState("");
+  const [cost, setCost] = useState("-");
 
   return (
     <ThemeProvider theme={theme}>
@@ -130,6 +133,7 @@ const CalcCost = () => {
                     currentPage={"1"}
                     countPerPage={"5"}
                     resultType={JSON}
+                    setInput={setDeparture}
                   />
                 </Box>
                 <Box marginTop="10px">
@@ -154,11 +158,12 @@ const CalcCost = () => {
                     currentPage={"1"}
                     countPerPage={"5"}
                     resultType={JSON}
+                    setInput={setDestination}
                   />
                 </Box>
               </Box>
               <Box>
-                <Typography fontSize={18} align="left">
+                <Typography fontSize={18} align="left" marginBottom={2}>
                   차량을 선택해주세요.
                 </Typography>
                 <Grid container spacing={1}>
@@ -205,7 +210,7 @@ const CalcCost = () => {
                 </Grid>
               </Box>
               <Box>
-                <Typography fontSize={18} align="left">
+                <Typography fontSize={18} align="left" marginBottom={2}>
                   운송 시간을 선택해주세요.
                 </Typography>
                 <Grid container>
@@ -234,7 +239,7 @@ const CalcCost = () => {
                 </Grid>
               </Box>
               <Box>
-                <Typography fontSize={18} align="left">
+                <Typography fontSize={18} align="left" marginBottom={2}>
                   운송 옵션을 알려주세요.
                 </Typography>
                 <Grid container>
@@ -288,6 +293,7 @@ const CalcCost = () => {
                   <Stack direction={"row"}>
                     <TrendingUpIcon />
                     <Typography>이동거리</Typography>
+                    <Box>{cost}</Box>
                   </Stack>
                   <Stack direction={"row"}>
                     <LocalShippingIcon />
@@ -297,7 +303,7 @@ const CalcCost = () => {
                   <Stack direction={"row"}>
                     <AccessTimeIcon />
                     <Typography>운송 시간</Typography>
-                    <Box sx={{ pl: "10" }}>{transportTime}</Box>
+                    <Box>{transportTime}</Box>
                   </Stack>
                   <Stack direction={"row"}>
                     <AddLocationIcon />
