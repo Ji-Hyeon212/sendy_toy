@@ -10,8 +10,6 @@ import Part4 from "./Part4";
 import Part5 from "./Part5";
 import Part6 from "./Part6";
 import Part7 from "./Part7";
-import Login from "./Login";
-import CalcCost from "./CalcCost";
 
 const theme = createTheme();
 
@@ -28,8 +26,6 @@ const Main = () => {
         <Part5 />
         <Part6 />
         <Part7 />
-        {/* <Login /> */}
-        {/* <CalcCost /> */}
       </main>
       <Footer />
     </ThemeProvider>
