@@ -15,6 +15,7 @@ interface distanceType {
   roadDeparture: string;
   jibunDestination: string;
   roadDestination: string;
+  setDist: React.Dispatch<React.SetStateAction<string>>;
 }
 
 const Distance = ({
@@ -22,6 +23,7 @@ const Distance = ({
   roadDeparture,
   jibunDestination,
   roadDestination,
+  setDist,
 }: distanceType) => {
   const [distance, setDistance] = useState("");
 
@@ -53,8 +55,9 @@ const Distance = ({
         },
       })
       .then((response) => {
-        console.log(response.data.wayPoints);
+        console.log(response.data.distance);
         setDistance(response.data.distance);
+        setDist(response.data.distance);
       })
       .catch((error) => {
         console.log(error);
