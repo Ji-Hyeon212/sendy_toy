@@ -74,6 +74,38 @@ const Cost = (props: costType) => {
   }, [props.transportTime]);
 
   useEffect(() => {
+    let truckInfo: any;
+
+    if (props.carType === "다마스") {
+      truckInfo = {
+        truckType: "DAMAS",
+      };
+    } else if (props.carType === "라보") {
+      truckInfo = {
+        truckType: "LABO",
+      };
+    } else if (props.carType === "1톤 카고") {
+      truckInfo = {
+        capacity: 1,
+        plus: false,
+        truckType: "TRUCK",
+        top: false,
+        fridge: false,
+        freezer: false,
+        lift: false,
+        horu: false,
+        long: false,
+        wing: false,
+      };
+    }
+
+    setData((prevData) => ({
+      ...prevData,
+      truckInfo,
+    }));
+  }, [props.carType]);
+
+  useEffect(() => {
     let workType: string;
 
     if (props.workType === "차량만") {
