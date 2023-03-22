@@ -27,6 +27,7 @@ import Address from "../../components/Address/Address";
 import Header from "../../components/Layout/Header/Header";
 import Distance from "../../components/Address/Distance";
 import AddressList from "../../components/Address/AddressList";
+import Cost from "../../components/Address/Cost";
 
 const theme = createTheme({
   palette: {
@@ -307,6 +308,7 @@ const CalcCost = () => {
                         roadDeparture={departure}
                         jibunDestination={jibunDestination}
                         roadDestination={destination}
+                        setDist={setDistance}
                       />
                     ) : null}
                   </Stack>
@@ -328,7 +330,18 @@ const CalcCost = () => {
                   <Divider />
                   <Stack direction={"row"}>
                     <Typography>용달 비용</Typography>
-                    <Box>{cost}</Box>
+                    {distance ? (
+                      <Cost
+                        distance={distance}
+                        carType={carType}
+                        transportTime={transportTime}
+                        jibunDeparture={jibunDeparture}
+                        roadDeparture={departure}
+                        jibunDestination={jibunDestination}
+                        roadDestination={destination}
+                        workType={transportOption}
+                      />
+                    ) : null}
                   </Stack>
                   <Button sx={{ height: 56 }} variant="contained">
                     센디 첫 운송 5천 원 할인 받기
