@@ -48,6 +48,7 @@ const Address = ({
         setRoad={setRoad}
         setJibun={setJibun}
         isConfirmed={setConfirmed}
+        setAddresses={setAddresses}
       />
     </div>
   );
