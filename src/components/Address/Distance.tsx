@@ -62,7 +62,7 @@ const Distance = ({
       .catch((error) => {
         console.log(error);
       });
-  }, [distance]);
+  }, [data]);
   return <div>{distance}km</div>;
 };
 
