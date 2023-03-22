@@ -11,6 +11,7 @@ interface searchType {
   resultType: JSON;
   setRoad: React.Dispatch<React.SetStateAction<string>>;
   setJibun: React.Dispatch<React.SetStateAction<string>>;
+  setConfirmed: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const Address = ({
@@ -20,6 +21,7 @@ const Address = ({
   resultType,
   setRoad,
   setJibun,
+  setConfirmed,
 }: searchType) => {
   const [addresses, setAddresses] = useState([]);
   const temp = new FormData();
@@ -45,6 +47,7 @@ const Address = ({
         addresses={addresses}
         setRoad={setRoad}
         setJibun={setJibun}
+        isConfirmed={setConfirmed}
       />
     </div>
   );

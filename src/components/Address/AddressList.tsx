@@ -8,7 +8,7 @@ interface addressType {
 }
 
 const index = [0, 1, 2, 3, 4];
-const AddressList = ({ addresses, setRoad, setJibun }: any) => {
+const AddressList = ({ addresses, setRoad, setJibun, isConfirmed }: any) => {
   return (
     <div>
       {addresses.map(({ roadAddr, jibunAddr }: addressType) => {
@@ -18,6 +18,7 @@ const AddressList = ({ addresses, setRoad, setJibun }: any) => {
             onClick={() => {
               setRoad(roadAddr);
               setJibun(jibunAddr);
+              isConfirmed(true);
             }}
           >
             <Typography variant="body2">

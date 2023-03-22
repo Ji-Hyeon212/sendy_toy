@@ -70,9 +70,11 @@ const CalcCost = () => {
   const [isBtnClicked, setisBtnClicked] = useState(false);
   const [departure, setDeparture] = useState("");
   const [jibunDeparture, setJibunDeparture] = useState("");
+  const [isConfirmedDeparture, setIsConfirmedDeparture] = useState(false);
   const [destination, setDestination] = useState("");
   const [jibunDestination, setJibunDestination] = useState("");
-  const [distance, setDistance] = useState("-");
+  const [isConfirmedDestination, setIsConfirmedDestination] = useState(false);
+  const [distance, setDistance] = useState("");
   const [cost, setCost] = useState("-");
 
   return (
@@ -140,6 +142,7 @@ const CalcCost = () => {
                     resultType={JSON}
                     setRoad={setDeparture}
                     setJibun={setJibunDeparture}
+                    setConfirmed={setIsConfirmedDeparture}
                   />
                 </Box>
                 <Box marginTop="10px">
@@ -166,6 +169,7 @@ const CalcCost = () => {
                     resultType={JSON}
                     setRoad={setDestination}
                     setJibun={setJibunDestination}
+                    setConfirmed={setIsConfirmedDestination}
                   />
                 </Box>
               </Box>
@@ -302,7 +306,7 @@ const CalcCost = () => {
                   <Stack direction={"row"}>
                     <TrendingUpIcon />
                     <Typography>이동거리</Typography>
-                    {departure && destination ? (
+                    {isConfirmedDeparture && isConfirmedDestination ? (
                       <Distance
                         jibunDeparture={jibunDeparture}
                         roadDeparture={departure}
