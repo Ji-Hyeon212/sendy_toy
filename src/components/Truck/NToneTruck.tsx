@@ -14,7 +14,7 @@ import ThreehalfToneTruck from "./ThreehalfToneTruck";
 import TwohalfToneTruck from "./TwohalfToneTruck";
 
 const NToneTruck = () => {
-  const [tone, setTone] = useState("");
+  const [tone, setTone] = useState("1");
 
   const handleChange = (event: SelectChangeEvent) => {
     setTone(event.target.value as string);
