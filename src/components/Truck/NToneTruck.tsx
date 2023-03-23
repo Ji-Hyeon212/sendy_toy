@@ -6,7 +6,12 @@ import {
 } from "@mui/material";
 import { Box, Stack } from "@mui/system";
 import React, { useEffect, useState } from "react";
+import ElevenToneTruck from "./ElevenToneTruck";
+import FiveTonePlus from "./FiveTonePlus";
+import FiveToneTruck from "./FiveToneTruck";
 import OneToneTruck from "./OneToneTruck";
+import ThreehalfToneTruck from "./ThreehalfToneTruck";
+import TwohalfToneTruck from "./TwohalfToneTruck";
 
 const NToneTruck = () => {
   const [tone, setTone] = useState("");
@@ -35,7 +40,12 @@ const NToneTruck = () => {
         </Select>
       </FormControl>
       <FormControl fullWidth>
-        <OneToneTruck />
+        {tone === "1" && <OneToneTruck />}{" "}
+        {tone === "2.5" && <TwohalfToneTruck />}{" "}
+        {tone === "3.5" && <ThreehalfToneTruck />}{" "}
+        {tone === "5" && <FiveToneTruck />}{" "}
+        {tone === "5plus" && <FiveTonePlus />}{" "}
+        {tone === "11" && <ElevenToneTruck />}
       </FormControl>
     </Stack>
   );
