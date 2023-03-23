@@ -26,8 +26,7 @@ const Distance = ({
   setDist,
 }: distanceType) => {
   const [distance, setDistance] = useState("");
-
-  const data = {
+  const [data, setData] = useState({
     orderVersion: "V_20191212",
     wayPoints: [
       {
@@ -45,7 +44,31 @@ const Distance = ({
         useElevator: true,
       },
     ],
-  };
+  });
+
+  useEffect(() => {
+    let wayPoints: any;
+    wayPoints = [
+      {
+        address: roadDeparture,
+        addressDetail: "",
+        floor: 0,
+        jibunAddress: jibunDeparture,
+        useElevator: true,
+      },
+      {
+        address: roadDestination,
+        addressDetail: "",
+        floor: 0,
+        jibunAddress: jibunDestination,
+        useElevator: true,
+      },
+    ];
+    setData((prevData) => ({
+      ...prevData,
+      wayPoints,
+    }));
+  }, [jibunDeparture, jibunDestination, roadDeparture, roadDestination]);
 
   useEffect(() => {
     axios
