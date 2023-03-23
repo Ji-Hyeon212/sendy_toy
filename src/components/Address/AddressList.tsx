@@ -7,7 +7,6 @@ interface addressType {
   jibunAddr: String;
 }
 
-const index = [0, 1, 2, 3, 4];
 const AddressList = ({
   addresses,
   setAddresses,
@@ -17,10 +16,10 @@ const AddressList = ({
 }: any) => {
   return (
     <div>
-      {addresses.map(({ roadAddr, jibunAddr }: addressType) => {
+      {addresses.map(({ roadAddr, jibunAddr }: addressType, index: number) => {
         return (
           <div
-            key={index.toString()}
+            key={index}
             onClick={() => {
               setRoad(roadAddr);
               setJibun(jibunAddr);
