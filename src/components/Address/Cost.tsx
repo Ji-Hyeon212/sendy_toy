@@ -45,6 +45,35 @@ const Cost = (props: costType) => {
   });
 
   useEffect(() => {
+    let wayPoints: any;
+    wayPoints = [
+      {
+        address: props.roadDeparture,
+        addressDetail: "",
+        floor: 0,
+        jibunAddress: props.jibunDeparture,
+        useElevator: true,
+      },
+      {
+        address: props.roadDestination,
+        addressDetail: "",
+        floor: 0,
+        jibunAddress: props.jibunDestination,
+        useElevator: true,
+      },
+    ];
+    setData((prevData) => ({
+      ...prevData,
+      wayPoints,
+    }));
+  }, [
+    props.jibunDeparture,
+    props.jibunDestination,
+    props.roadDeparture,
+    props.roadDestination,
+  ]);
+
+  useEffect(() => {
     let pickUpDateTime: string;
     const year = String(date.getFullYear());
     let month = String(date.getMonth() + 1);
