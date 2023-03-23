@@ -22,6 +22,8 @@ import TrendingUpIcon from "@mui/icons-material/TrendingUp";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import AddLocationIcon from "@mui/icons-material/AddLocation";
+import CheckIcon from "@mui/icons-material/Check";
+import CloseIcon from "@mui/icons-material/Close";
 import Footer from "../../components/Layout/Footer/Footer";
 import Address from "../../components/Address/Address";
 import Header from "../../components/Layout/Header/Header";
@@ -302,7 +304,30 @@ const CalcCost = () => {
                     </SelectButton>
                   </Grid>
                 </Grid>
-                <Stack direction="column"></Stack>
+                <Stack direction="column">
+                  <Stack direction={"row"}>
+                    <CheckIcon />
+                    <Typography>기사님이 차량 운전만 해줘요.</Typography>
+                  </Stack>
+                  <Stack direction={"row"}>
+                    <CloseIcon />
+                    <Typography>
+                      기사님이 짐을 차량에 싣고 내리는 것을 도와줘요.
+                    </Typography>
+                  </Stack>
+                  <Stack direction={"row"}>
+                    <CloseIcon />
+                    <Typography>
+                      기사님이 출·도착지에서 차량까지 짐을 옮기는 것을 도와줘요.
+                    </Typography>
+                  </Stack>
+                  <Stack direction={"row"}>
+                    <CloseIcon />
+                    <Typography>
+                      인부 1명이 기사님과 함께 짐 운반을 도와줘요.
+                    </Typography>
+                  </Stack>
+                </Stack>
               </Box>
             </Stack>
             <Stack paddingLeft={2} width={"30%"}>
