@@ -28,6 +28,7 @@ import Header from "../../components/Layout/Header/Header";
 import Distance from "../../components/Address/Distance";
 import AddressList from "../../components/Address/AddressList";
 import Cost from "../../components/Address/Cost";
+import NToneTruck from "../../components/Truck/NToneTruck";
 
 const theme = createTheme({
   palette: {
@@ -183,7 +184,10 @@ const CalcCost = () => {
                       variant="outlined"
                       fullWidth
                       disableRipple
-                      onClick={() => setCarType("다마스")}
+                      onClick={() => {
+                        setCarType("다마스");
+                        setisBtnClicked(false);
+                      }}
                     >
                       다마스
                     </SelectButton>
@@ -193,7 +197,10 @@ const CalcCost = () => {
                       variant="outlined"
                       fullWidth
                       disableRipple
-                      onClick={() => setCarType("라보")}
+                      onClick={() => {
+                        setCarType("라보");
+                        setisBtnClicked(false);
+                      }}
                     >
                       라보
                     </SelectButton>
@@ -203,7 +210,10 @@ const CalcCost = () => {
                       variant="outlined"
                       fullWidth
                       disableRipple
-                      onClick={() => setCarType("1톤 카고")}
+                      onClick={() => {
+                        setCarType("1톤 카고");
+                        setisBtnClicked(false);
+                      }}
                     >
                       1톤 카고
                     </SelectButton>
@@ -221,6 +231,7 @@ const CalcCost = () => {
                     </SelectButton>
                   </Grid>
                 </Grid>
+                {isBtnClicked && <NToneTruck />}
               </Box>
               <Box>
                 <Typography fontSize={18} align="left" marginBottom={2}>
