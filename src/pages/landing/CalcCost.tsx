@@ -26,7 +26,6 @@ import Footer from "../../components/Layout/Footer/Footer";
 import Address from "../../components/Address/Address";
 import Header from "../../components/Layout/Header/Header";
 import Distance from "../../components/Address/Distance";
-import AddressList from "../../components/Address/AddressList";
 import Cost from "../../components/Address/Cost";
 import NToneTruck from "../../components/Truck/NToneTruck";
 
@@ -76,7 +75,6 @@ const CalcCost = () => {
   const [jibunDestination, setJibunDestination] = useState("");
   const [isConfirmedDestination, setIsConfirmedDestination] = useState(false);
   const [distance, setDistance] = useState("");
-  const [cost, setCost] = useState("-");
 
   return (
     <ThemeProvider theme={theme}>
