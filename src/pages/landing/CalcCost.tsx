@@ -115,6 +115,7 @@ const CalcCost = () => {
               paddingRight={3}
               width={"70%"}
             >
+              {/* 주소지 */}
               <Box>
                 <Typography fontSize={18} align="left" marginBottom={2}>
                   출/도착지를 입력해주세요.
@@ -174,6 +175,7 @@ const CalcCost = () => {
                   />
                 </Box>
               </Box>
+              {/* 차량종류 */}
               <Box>
                 <Typography fontSize={18} align="left" marginBottom={2}>
                   차량을 선택해주세요.
@@ -330,6 +332,7 @@ const CalcCost = () => {
                 </Stack>
               </Box>
             </Stack>
+            {/* 비용 계산 결과 */}
             <Stack paddingLeft={2} width={"30%"}>
               <Stack direction={"row"}>
                 <Typography>비용 계산 결과</Typography>
