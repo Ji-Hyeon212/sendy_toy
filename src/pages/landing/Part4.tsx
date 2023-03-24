@@ -57,17 +57,11 @@ const Part4 = () => {
               체험해보세요.
             </Typography>
           </Container>
-          <Stack
-            sx={{ pt: 16 }}
-            direction="row"
-            spacing={2}
-            justifyContent="center"
-          >
-            <Stack direction="column">
-              <Container sx={{ p: 3, mb: 4 }}>
+          <Stack direction="row" spacing={2} justifyContent="center">
+            <Stack direction="column" justifyContent="center">
+              <Container sx={{ p: 3 }}>
                 <Typography
-                  component="h5"
-                  variant="h5"
+                  variant="h6"
                   align="left"
                   color="text.primary"
                   gutterBottom
@@ -75,8 +69,7 @@ const Part4 = () => {
                   <b>실시간 요금 확인</b>
                 </Typography>
                 <Typography
-                  component="h6"
-                  variant="h6"
+                  variant="body1"
                   align="left"
                   color="text.primary"
                   paragraph
@@ -86,10 +79,9 @@ const Part4 = () => {
                   확인하세요.
                 </Typography>
               </Container>
-              <Container sx={{ p: 3, mb: 4 }}>
+              <Container sx={{ p: 3 }}>
                 <Typography
-                  component="h5"
-                  variant="h5"
+                  variant="h6"
                   align="left"
                   color="text.primary"
                   gutterBottom
@@ -97,8 +89,7 @@ const Part4 = () => {
                   <b>운송비 간편결제</b>
                 </Typography>
                 <Typography
-                  component="h6"
-                  variant="h6"
+                  variant="body1"
                   align="left"
                   color="text.primary"
                   paragraph
@@ -107,10 +98,9 @@ const Part4 = () => {
                   카드를 간편하게 추가하고 편리하게 결제하세요.
                 </Typography>
               </Container>
-              <Container sx={{ p: 3, mb: 4 }}>
+              <Container sx={{ p: 3 }}>
                 <Typography
-                  component="h5"
-                  variant="h5"
+                  variant="h6"
                   align="left"
                   color="text.primary"
                   gutterBottom
@@ -118,8 +108,7 @@ const Part4 = () => {
                   <b>기사님 정보 확인</b>
                 </Typography>
                 <Typography
-                  component="h6"
-                  variant="h6"
+                  variant="body1"
                   align="left"
                   color="text.primary"
                   paragraph
@@ -128,10 +117,9 @@ const Part4 = () => {
                   운송별 담당 기사님과 차량번호를 센디에서 바로 확인해보세요.
                 </Typography>
               </Container>
-              <Container sx={{ p: 3, mb: 4 }}>
+              <Container sx={{ p: 3 }}>
                 <Typography
-                  component="h5"
-                  variant="h5"
+                  variant="h6"
                   align="left"
                   color="text.primary"
                   gutterBottom
@@ -139,8 +127,7 @@ const Part4 = () => {
                   <b>운송 현황</b>
                 </Typography>
                 <Typography
-                  component="h6"
-                  variant="h6"
+                  variant="body1"
                   align="left"
                   color="text.primary"
                   paragraph
@@ -150,8 +137,8 @@ const Part4 = () => {
                 </Typography>
               </Container>
             </Stack>
-            <Container maxWidth="xs">
-              <img src="assets/Group 676.png" alt="random" />
+            <Container maxWidth="sm">
+              <img src="assets/Group 676.png" alt="random" width="100%" />
             </Container>
           </Stack>
         </Container>

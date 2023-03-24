@@ -30,8 +30,9 @@ const Part3 = () => {
           direction="column"
           spacing={2}
           justifyContent="center"
+          textAlign={"center"}
         >
-          <Container maxWidth="md">
+          <Container>
             <Typography
               component="h2"
               variant="h2"
@@ -52,7 +53,7 @@ const Part3 = () => {
               만들어진 서비스입니다.
             </Typography>
           </Container>
-          <Box sx={{ textAlign: "center" }} maxWidth="md">
+          <Box sx={{ textAlign: "center" }}>
             <img
               src="/assets/img-service-desk.png"
               alt="random"

@@ -8,6 +8,7 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import Link from "@mui/material/Link";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 const theme = createTheme({
   palette: {
@@ -28,7 +29,7 @@ const Part6 = () => {
         sx={{
           bgcolor: "background.paper",
           pt: 8,
-          pb: 30,
+          pb: 8,
         }}
       >
         <Box
@@ -36,20 +37,46 @@ const Part6 = () => {
             py: 3,
             px: 2,
             mt: "auto",
-            height: "437",
+            height: "437px",
             justifyContent: "center",
+            textAlign: "center",
             backgroundColor: theme.palette.primary.main,
           }}
-        ></Box>
+        >
+          <Container sx={{ mt: 10, align: "center" }}>
+            <Typography variant="h3" color="#ffffff" gutterBottom>
+              <b>지금 바로 운송을 시작해보세요.</b>
+            </Typography>
+            <Typography
+              variant="body1"
+              color="#ffffff"
+              marginTop={5}
+              gutterBottom
+            >
+              간단한 회원가입 단계를 거치고,
+              <br />
+              센디의 모든 서비스를 제한 없이 이용하세요.
+            </Typography>
+            <Button
+              sx={{
+                color: "#ffffff",
+                borderBlockColor: "#ffffff",
+                width: 240,
+                height: 56,
+                mt: 5,
+              }}
+              // disableElevation
+              // disableRipple
+              variant="outlined"
+            >
+              센디 시작하기
+            </Button>
+          </Container>
+        </Box>
 
-        <Container maxWidth="lg">
-          <Stack
-            sx={{ pt: 16 }}
-            direction="row"
-            spacing={2}
-            justifyContent="center"
-          >
-            <Container maxWidth="md">
+        <Container maxWidth="xl">
+          <Stack sx={{ mt: 16 }} direction="row" justifyContent="center">
+            <Box paddingRight={3}>
               <img src="assets/ic-section-mag.png" alt="mag" />
               <Typography
                 component="h3"
@@ -76,21 +103,18 @@ const Part6 = () => {
               <Button
                 sx={{ width: 240, height: 56 }}
                 variant="contained"
-                size="large"
-                fullWidth
                 disableElevation
                 disableRipple
               >
                 센디 가이드 전체 보기
               </Button>
-            </Container>
-            <Stack direction="column">
+            </Box>
+            <Stack direction="column" alignItems={"center"} spacing={2}>
               <Container
                 sx={{
-                  backgroundColor: (theme) =>
-                    theme.palette.mode === "light"
-                      ? theme.palette.grey[200]
-                      : theme.palette.grey[800],
+                  backgroundColor: theme.palette.grey[200],
+                  padding: 3,
+                  borderRadius: 3,
                 }}
               >
                 <Typography
@@ -102,17 +126,17 @@ const Part6 = () => {
                 >
                   <b>어떤 차량으로 옮겨야 하죠?</b>
                 </Typography>
-                <Typography
-                  variant="body2"
-                  align="left"
-                  color="text.primary"
-                  paragraph
-                  gutterBottom
-                >
+                <Typography variant="body2" align="left" color="text.primary">
                   운송 물품에 따른 용달 차량을 확인해보세요.
                 </Typography>
               </Container>
-              <Container>
+              <Container
+                sx={{
+                  backgroundColor: theme.palette.grey[200],
+                  padding: 3,
+                  borderRadius: 3,
+                }}
+              >
                 <Typography
                   component="h6"
                   variant="h6"
@@ -133,7 +157,13 @@ const Part6 = () => {
                   확인해보세요.
                 </Typography>
               </Container>
-              <Container>
+              <Container
+                sx={{
+                  backgroundColor: theme.palette.grey[200],
+                  padding: 3,
+                  borderRadius: 3,
+                }}
+              >
                 <Typography
                   component="h6"
                   variant="h6"

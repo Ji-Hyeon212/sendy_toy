@@ -8,7 +8,6 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import Link from "@mui/material/Link";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-// import { ReactComponent as Blog } from "assets/_img-blog-thumbnails.svg";
 
 const theme = createTheme({
   palette: {
