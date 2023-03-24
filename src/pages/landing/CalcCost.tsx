@@ -384,6 +384,31 @@ const CalcCost = () => {
                       />
                     ) : null}
                   </Stack>
+                  {(carType === "라보" || carType === "다마스") &&
+                    parseInt(distance) >= 50 && (
+                      <Box sx={{ bgcolor: "#FEF5F5" }}>
+                        <Stack direction={"row"}>
+                          <ErrorIcon color="error" />
+                          <Typography fontSize={"12px"} color="#FE0000">
+                            다마스/라보는 50km 이상 장거리 운송이 불가능합니다.
+                            1톤 이상 차량으로 변경해주세요.
+                          </Typography>
+                        </Stack>
+                      </Box>
+                    )}
+                  {/* {(carType === "라보" || carType === "다마스") &&
+                    transportTime === "야간" && (
+                      <Box sx={{ bgcolor: "#FEF5F5" }}>
+                        <Stack direction={"row"}>
+                          <ErrorIcon color="error" />
+                          <Typography fontSize={"12px"} color="#FE0000">
+                            다마스/라보는 조조·야간(오전 8시 이전·오후 6시 이후)
+                            운송이 불가능합니다. 운송 시간대 혹은 차량을
+                            변경해주세요.
+                          </Typography>
+                        </Stack>
+                      </Box>
+                    )} */}
                   <Button sx={{ height: 56 }} variant="contained">
                     센디 첫 운송 5천 원 할인 받기
                   </Button>
