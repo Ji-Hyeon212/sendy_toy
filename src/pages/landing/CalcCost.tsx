@@ -233,42 +233,51 @@ const CalcCost = () => {
                     </SelectButton>
                   </Grid>
                 </Grid>
-                {isBtnClicked && <NToneTruck />}
+                {isBtnClicked && (
+                  <NToneTruck
+                    carType={"1톤 방수 덮개(호루)"}
+                    setCarType={setCarType}
+                  />
+                )}
               </Box>
+              {/* 운송시간 */}
               <Box>
                 <Typography fontSize={18} align="left" marginBottom={2}>
                   운송 시간을 선택해주세요.
                 </Typography>
-                <Grid container>
+                <Grid container spacing={1}>
                   <Grid item xs={6}>
-                    <Button
+                    <SelectButton
                       variant="outlined"
                       startIcon={<WbSunnyIcon />}
                       fullWidth
+                      disableRipple
                       onClick={() => setTransportTime("주간")}
                     >
                       <Typography>주간</Typography>
                       <Typography>08:00 ~ 18:00</Typography>
-                    </Button>
+                    </SelectButton>
                   </Grid>
                   <Grid item xs={6}>
-                    <Button
+                    <SelectButton
                       variant="outlined"
                       startIcon={<Brightness3Icon />}
                       fullWidth
+                      disableRipple
                       onClick={() => setTransportTime("야간")}
                     >
                       <Typography>야간</Typography>
                       <Typography>18:00 ~ 08:00</Typography>{" "}
-                    </Button>
+                    </SelectButton>
                   </Grid>
                 </Grid>
               </Box>
+              {/* 운송옵션 */}
               <Box>
                 <Typography fontSize={18} align="left" marginBottom={2}>
                   운송 옵션을 알려주세요.
                 </Typography>
-                <Grid container>
+                <Grid container spacing={1}>
                   <Grid item xs={3}>
                     <SelectButton
                       variant="outlined"
